@@ -28,7 +28,9 @@ export default function ChatBox() {
   const sendMessage = async () => {
     if (!input.trim()) return;
 
-    const newMessages = [...messages, { role: "user", content: input }];
+    // const newMessages = [...messages, { role: "user", content: input }];
+    // setMessages(newMessages);
+    const newMessages = [...messages, { role: "user", content: input } as Message];
     setMessages(newMessages);
     setInput("");
     setLoading(true);
@@ -48,7 +50,8 @@ export default function ChatBox() {
           ? "• " + data.answer.split(". ").join("\n• ")
           : data.answer;
 
-      setMessages([...newMessages, { role: "assistant", content: formattedAnswer }]);
+      // setMessages([...newMessages, { role: "assistant", content: formattedAnswer }]);
+      setMessages([...newMessages, { role: "assistant", content: formattedAnswer } as Message]);
     } catch (err) {
       setMessages([
         ...newMessages,
