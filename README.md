@@ -34,3 +34,9 @@ A Next.js 15 chatbot app that helps users explore books. It fetches book data fr
 ```bash
 git clone git@github.com:VasanthaDeepikaOff/book-explorer-chatbot.git
 cd book-explorer-chatbot
+npm install
+Add your OpenAI API key:
+  Create a .env.local file in the root:
+  OPENAI_API_KEY=your_openai_api_key
+npm run dev
+Open http://localhost:3000 to see the app.
